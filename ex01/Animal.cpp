@@ -5,6 +5,11 @@ Animal::Animal() : type("hogemaru")
    std::cout << "<Animal> Constructor called(" << this->type \
     <<")"<<std::endl;
 }
+const std::string*	Animal::getIdea(size_t idx) const {
+	// return (NULL);
+	return (&this->type);
+	static_cast<void>(idx);
+}
 
 Animal::Animal(const Animal& obj)
 {

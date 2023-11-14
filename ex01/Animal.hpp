@@ -12,5 +12,6 @@ public:
     Animal& operator=(const Animal& obj);
     const std::string&	getType(void) const;
 	virtual void		makeSound(void) const;
+    virtual const std::string*	getIdea(size_t idx) const;
 };
 #endif
