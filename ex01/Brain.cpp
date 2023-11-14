@@ -8,6 +8,7 @@ Brain::Brain(void)
     {
         ss.clear();
         ss << i;
+        this->_ideas[i] = new std::string;
         ss >> *(this->_ideas[i]);
     }
     std::cout << "<Brain> Constructor called"<<std::endl;
