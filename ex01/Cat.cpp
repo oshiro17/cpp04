@@ -18,6 +18,7 @@ Cat::~Cat()
 {
 	std::cout << "<Cat> Destructor called (" << this->type \
     <<")"<<std::endl;
+    delete this->_brain;
 }
 
 Cat& Cat::operator=(const Cat& obj)
