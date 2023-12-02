@@ -39,3 +39,12 @@ void Cat::makeSound()const
 	<<")"<<std::endl;
 }
 
+// const Brain*	Cat::getBrain(void) const
+// {
+// 	return (this->_brain);
+// }
+
+const std::string*	Cat::getIdea(size_t idx) const
+{
+	return (this->_brain->getIdea(idx));
+}

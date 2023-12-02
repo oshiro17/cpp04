@@ -6,38 +6,39 @@
 
 int main() 
 {
-{ 
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-std::cout<<"_____";
-i->makeSound(); //will output the cat sound!
-std::cout<<"_____";
-j->makeSound();
-meta->makeSound();
-// delete meta;
-delete i;
-// delete j;
-
-} 
-std::cout<<"_____WRONG_____\n";
-{ 
-const WrongAnimal* meta = new WrongAnimal();
-const WrongAnimal* i = new WrongCat();
-std::cout << i->getType() << " " << std::endl;
-std::cout<<"_____";
-i->makeSound(); //will output the cat sound!
-std::cout<<"_____";
-meta->makeSound();
-// delete meta;
-delete i;
-// delete j;
-return 0;
+{
+    std::cout<<"____test dor basic bihaviors_______"<<std::endl;
+    const Animal *j = new Dog();
+    const Animal *i = new Cat();
+    j->makeSound();
+    i->makeSound();
+    delete j;
+    delete i;
+}
+{
+    std::cout<< std::endl << "________test for copy constructor______"<< std::endl;
+    const Animal* j = new Dog();
+    Animal* i = new Dog();
+    *i = *j;
+    j->makeSound();
+    i->makeSound();
+    delete j;
+    delete i;
+}
+{
+    const Dog* j0 = new Dog();
+    const Dog j1(*j0);
+    Dog* j2 = new Dog();
+    *j2 = j1;
+    
+    j0->makeSound();
+    j1.makeSound();
+    j2->makeSound();
+    delete j0;
+    delete j2;
 }
 }
 __attribute__ ((destructor)) void destructor(void)
 {
-// system("leaks -q a.out");
+system("leaks -q a.out");
 }
