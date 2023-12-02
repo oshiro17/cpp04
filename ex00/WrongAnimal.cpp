@@ -1,5 +1,4 @@
 #include "WrongAnimal.hpp"
-//test
 
 WrongAnimal::WrongAnimal() : type("hogemaru")
 {
