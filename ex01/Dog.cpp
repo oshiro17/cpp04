@@ -8,24 +8,30 @@ Dog::Dog(void)
     <<")"<<std::endl;
 }
 
-Dog::Dog(const Dog&obj)
+Dog::Dog(const Dog&obj) : Animal(obj)
 {
+    this->_brain = NULL;
 	*this = obj;
 	std::cout << "<Dog> Copy Constructor called (" << this->type \
     <<")"<<std::endl;
+    // printf()
 }
+
 Dog::~Dog()
 {
-	std::cout << "<Dog> Destructor called (" << this->type \
-    <<")"<<std::endl;
+    delete this->_brain;
+    std::cout << "<Dog> Destructor called (" << this->type << ")" << std::endl;
 }
 Dog& Dog::operator=(const Dog& obj)
 {
-    if (this != &obj)
-    {
-        this->type = obj.type;
 	    std::cout <<"<Dog> Copy assignment operator of Dog called(" << this->type \
     <<")"<<std::endl;
+    if (this != &obj)
+    {
+        if (this->_brain != nullptr)
+            delete this->_brain;
+        this->_brain = new Brain(*obj._brain);
+        this->type = obj.type;
         *this->_brain = *obj._brain;
     }
     return (*this);
