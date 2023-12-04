@@ -12,6 +12,8 @@ int main()
     const Animal *i = new Cat();
     j->makeSound();
     i->makeSound();
+    for(int i =0;i <=100;i++)
+        j->getIdea(i);
     delete j;
     delete i;
 }

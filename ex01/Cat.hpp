@@ -13,5 +13,6 @@ public:
     Cat& operator=(const Cat &obj);
 	~Cat(void);
 	void makeSound(void) const;
+    std::string getBrain(size_t i)const;
 };
 #endif

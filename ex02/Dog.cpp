@@ -40,11 +40,6 @@ Dog& Dog::operator=(const Dog& obj)
 void Dog::makeSound() const {
     std::cout << "<Dog> Woof! Woof! (" << this->type << ")" << std::endl;
 }
-// const Brain*	Dog::getBrain(void) const
-// {
-// 	return (this->_brain);
-// }
-
 
 const std::string* Dog::getIdea(size_t idx) const
 {

@@ -19,6 +19,8 @@ int	main()
 		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
+		for (size_t x= 0;x <=100 ;x++)
+			std::cout<<i->getBrain(x)<<std::endl;
 		delete meta;
 		delete j;
 		delete i;
@@ -75,7 +77,7 @@ int	main()
 		std::cout << std::endl << "\033[33mInstantiate Dog from Doggy class\033[m" << std::endl;
 		const Dog* meta = new Dog();
 		const Dog j(*meta);
-		Dog* i = new Dog(); 
+		Dog* i = new Dog();
 
 		*i = j;
 		meta->makeSound();
