@@ -13,6 +13,7 @@ int	main()
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
+		const Cat dog;
 
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
@@ -20,7 +21,7 @@ int	main()
 		j->makeSound();
 		meta->makeSound();
 		for (size_t x= 0;x <=100 ;x++)
-			std::cout<<i->getBrain(x)<<std::endl;
+			std::cout<<dog.getBrain(x)<<std::endl;
 		delete meta;
 		delete j;
 		delete i;

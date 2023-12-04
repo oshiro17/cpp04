@@ -43,6 +43,5 @@ Brain::~Brain()
 }
 
 const std::string	Brain::getIdea(size_t idx) const{
-    std
     return(this->_ideas[idx]);
 }
