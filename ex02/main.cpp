@@ -10,10 +10,10 @@ int main()
     std::cout<<"____test dor basic bihaviors_______"<<std::endl;
     const Animal *j = new Dog();
     const Animal *i = new Cat();
+    const Dog dog;
+    const Cat cat;
     j->makeSound();
     i->makeSound();
-    for(int i =0;i <=100;i++)
-        j->getIdea(i);
     delete j;
     delete i;
 }

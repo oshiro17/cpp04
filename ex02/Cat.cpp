@@ -40,7 +40,7 @@ void Cat::makeSound()const
 }
 
 
-const std::string*	Cat::getIdea(size_t idx) const
+const std::string	Cat::getIdea(size_t idx) const
 {
 	return (this->_brain->getIdea(idx));
 }

@@ -41,7 +41,7 @@ void Dog::makeSound() const {
     std::cout << "<Dog> Woof! Woof! (" << this->type << ")" << std::endl;
 }
 
-const std::string* Dog::getIdea(size_t idx) const
+const std::string Dog::getIdea(size_t idx) const
 {
     return (this->_brain->getIdea(idx));
 }

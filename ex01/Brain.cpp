@@ -9,7 +9,6 @@ Brain::Brain(void)
         std::ostringstream ss;
         ss.clear();
         ss << i;
-        std::cout<<ss.str();
         this->_ideas[i] = ss.str();
     }
     std::cout << "<Brain> Constructor called"<<std::endl;

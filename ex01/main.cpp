@@ -13,20 +13,22 @@ int	main()
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
-		const Cat dog;
+		const Dog dog;
+		const Cat cat;
 
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
 		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
-		for (size_t x= 0;x <=100 ;x++)
-			std::cout<<dog.getBrain(x)<<std::endl;
+		for (size_t x=0;x<=100;x++)
+			std::cout << cat.getBrain(x) << std::endl;
+		for (size_t x=0;x<=100;x++)
+			std::cout << dog.getBrain(x) << std::endl;
 		delete meta;
 		delete j;
 		delete i;
 	}
-
 	std::cout << std::endl << "______Replace the Cat by WrongCat class_____" << std::endl;
 	{
 		const WrongAnimal* meta = new WrongAnimal();
@@ -90,7 +92,7 @@ int	main()
 	return 0;
 }
 
-// __attribute__ ((destructor)) void destructor(void)
-// {
-// system("leaks -q a.out");
-// }
+__attribute__ ((destructor)) void destructor(void)
+{
+system("leaks -q a.out");
+}

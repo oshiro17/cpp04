@@ -13,5 +13,6 @@ public:
     Dog& operator=(const Dog& obj);
     ~Dog(void);
     void makeSound(void) const;
+    std::string getBrain(size_t i)const;
 };
 #endif

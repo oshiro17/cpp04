@@ -42,3 +42,8 @@ void Dog::makeSound()const
 	std::cout <<"<Dog> Woof! Woof!(" << this->type \
     <<")"<<std::endl;
 }
+
+std::string Dog::getBrain(size_t i)const
+{
+    return(this->_brain->getIdea(i));
+}
