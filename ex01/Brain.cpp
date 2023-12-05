@@ -2,14 +2,15 @@
 
 Brain::Brain(void)
 {
-    std::stringstream ss;
+     std::ostringstream ss;
 
     for (size_t i = 0; i < 100; i++)
     {
+        std::ostringstream ss;
         ss.clear();
         ss << i;
+        std::cout<<ss.str();
         this->_ideas[i] = ss.str();
-        // ss >> *(this->_ideas[i]);
     }
     std::cout << "<Brain> Constructor called"<<std::endl;
 }
@@ -34,12 +35,6 @@ Brain& Brain::operator=(const Brain& obj)
 Brain::~Brain()
 {
     std::cout << "<Brain>Destructor called"<< std::endl;
-    //  std::stringstream ss;
-    // for (size_t i = 0; i < 100; i++)
-    // {
-    //     delete this._ideas[i];
-    //     this->_ideas[i] = NULL;
-    // }
 }
 
 const std::string	Brain::getIdea(size_t idx) const{
