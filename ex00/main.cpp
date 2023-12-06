@@ -37,7 +37,7 @@ delete i;
 return 0;
 }
 }
-__attribute__ ((destructor)) void destructor(void)
-{
-// system("leaks -q a.out");
-}
+// __attribute__ ((destructor)) void destructor(void)
+// {
+// // system("leaks -q a.out");
+// }

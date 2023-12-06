@@ -40,7 +40,7 @@ int main()
     delete j2;
 }
 }
-__attribute__ ((destructor)) void destructor(void)
-{
-system("leaks -q a.out");
-}
+// __attribute__ ((destructor)) void destructor(void)
+// {
+// system("leaks -q a.out");
+// }
