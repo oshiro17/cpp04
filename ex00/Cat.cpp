@@ -7,7 +7,7 @@ Cat::Cat(void)
     << ")" << std::endl;
 }
 
-Cat::Cat(const Cat&obj)
+Cat::Cat(const Cat&obj) :Animal(obj)
 {
 	*this = obj;
 	std::cout << "<Cat> Copy Constructor called (" << this->type \

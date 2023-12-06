@@ -14,7 +14,6 @@ Dog::Dog(const Dog&obj) : Animal(obj)
 	*this = obj;
 	std::cout << "<Dog> Copy Constructor called (" << this->type \
     <<")"<<std::endl;
-    // printf()
 }
 
 Dog::~Dog()
@@ -28,7 +27,7 @@ Dog& Dog::operator=(const Dog& obj)
     <<")"<<std::endl;
     if (this != &obj)
     {
-        if (this->_brain != nullptr)
+        if (this->_brain != NULL)
             delete this->_brain;
         this->_brain = new Brain(*obj._brain);
         this->type = obj.type;

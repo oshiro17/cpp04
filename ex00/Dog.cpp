@@ -7,7 +7,7 @@ Dog::Dog(void)
     <<")"<<std::endl;
 }
 
-Dog::Dog(const Dog&obj)
+Dog::Dog(const Dog&obj) : Animal(obj)
 {
 	*this = obj;
 	std::cout << "<Dog> Copy Constructor called (" << this->type \
@@ -18,7 +18,7 @@ Dog::~Dog()
 	std::cout << "<Dog> Destructor called (" << this->type \
     <<")"<<std::endl;
 }
-Dog& Dog::operator=(const Dog& obj)
+Dog& Dog::operator=(const Dog& obj) 
 {
     if (this != &obj)
     {

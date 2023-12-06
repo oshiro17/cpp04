@@ -7,7 +7,7 @@ WrongCat::WrongCat(void)
     <<")"<<std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat&obj)
+WrongCat::WrongCat(const WrongCat&obj):WrongAnimal(obj)
 {
 	*this = obj;
 	std::cout << "<WrongCat> Copy Constructor called (" << this->type \

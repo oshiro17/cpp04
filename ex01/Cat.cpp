@@ -8,8 +8,9 @@ Cat::Cat(void)
     << ")" << std::endl;
 }
 
-Cat::Cat(const Cat&obj)
+Cat::Cat(const Cat&obj):Animal(obj)
 {
+    this->_brain = NULL;
 	*this = obj;
 	std::cout << "<Cat> Copy Constructor called (" << this->type \
     <<")"<<std::endl;
@@ -23,11 +24,14 @@ Cat::~Cat()
 
 Cat& Cat::operator=(const Cat& obj)
 {
+    std::cout <<"<Cat> Copy assignment operator of cat called(" << this->type \
+    <<")"<<std::endl;
     if (this != &obj)
     {
+        if (this->_brain != NULL)
+            delete this->_brain;
+        this->_brain = new Brain(*obj._brain);
         this->type = obj.type;
-	    std::cout << "<Cat> Copy assignment operator of Cat called(" << this->type \
-    <<")"<<std::endl;
         *this->_brain = *obj._brain;
     }
 	return (*this);
